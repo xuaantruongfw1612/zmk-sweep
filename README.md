@@ -1,9 +1,7 @@
 # Ferris Sweep Keyboard
----
 
-## *The Ferris Sweep* is a compact split mechanical keyboard featuring a 3x5 layout plus thumb keys. It uses the ZMK firmware, allowing full customization of keys, layers, and advanced behaviors. The keyboard supports Bluetooth Low Energy (BLE), multiple layers, and modern features such as home row mods, tri-layer, and macros.
-
----
+## Introduce
+**The Ferris Sweep** is a compact split mechanical keyboard featuring a 3x5 layout plus thumb keys. It uses the ZMK firmware, allowing full customization of keys, layers, and advanced behaviors. The keyboard supports Bluetooth Low Energy (BLE), multiple layers, and modern features such as home row mods, tri-layer, and macros.
 
 ## Overview:<br>
 Keyboard Name: Ferris Sweep <br>
