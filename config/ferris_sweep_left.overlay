@@ -1,0 +1,10 @@
+/*
+ * Copyright (c) 2025
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "ferris_sweep.overlay"
+
+&default_transform {
+    col-offset = <0>;
+};
