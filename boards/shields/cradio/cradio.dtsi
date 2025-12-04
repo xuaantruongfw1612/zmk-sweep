@@ -32,24 +32,24 @@
         >;
     };
 
-    kscan0: kscan {
+        kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
         wakeup-source;
 
-        /* ROWS (diode rows) */
-        row-gpios =
-            <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   /* ROW0 = 009 */
-            <&pro_micro 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   /* ROW1 = 106 = P1.06 = 22 */
-            <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   /* ROW2 = 104 = P1.04 = 20 */
-            <&pro_micro 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   /* ROW3 = 011 */
-            <&pro_micro 30 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   /* ROW4 = 100 = P1.00 = 30 */
+        input-gpios =
+            /* ROWS – diode nằm theo chiều dọc, nối bên trái */
+              <&pro_micro 115 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 113 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 111 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro  10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
 
-        /* COLUMNS (switch columns) */
-        col-gpios =
-            <&pro_micro 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   /* COL0 = 115 = P1.15 = 31 */
-            <&pro_micro 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   /* COL1 = 113 = P1.13 = 29 */
-            <&pro_micro 27 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   /* COL2 = 111 = P1.11 = 27 */
-            <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;   /* COL3 = 010 = P0.10 */
+            /* COLUMNS – từ trái sang phải */
+            , <&pro_micro   9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 106 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 104 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro  11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 100 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
     };
 };
 
