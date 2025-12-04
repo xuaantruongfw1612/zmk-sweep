@@ -4,18 +4,16 @@
  * SPDX-License-Identifier: MIT
  */
 
-/delete-node/ &kscan0;
-
 &default_transform {
     col-offset = <5>;
 };
 
 / {
-    kscan0: kscan {
+    kscan_matrix: kscan_matrix {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
         diode-direction = "col2row";
-        label = "KSCAN";
+        label = "KSCAN_MATRIX";
         
         row-gpios
             = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -31,6 +29,10 @@
             , <&gpio0 11 GPIO_ACTIVE_HIGH>
             , <&gpio1  0 GPIO_ACTIVE_HIGH>
             ;
+    };
+
+    chosen {
+        zmk,kscan = &kscan_matrix;
     };
 };
 
