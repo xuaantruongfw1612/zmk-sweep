@@ -5,10 +5,19 @@
  */
 
 / {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+};
+
+/delete-node/ &kscan0;
+
+/ {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
         diode-direction = "col2row";
+        label = "KSCAN";
         
         row-gpios
             = <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
