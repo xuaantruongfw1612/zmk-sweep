@@ -4,15 +4,13 @@
  * SPDX-License-Identifier: MIT
  */
 
+/delete-node/ &kscan0;
+
 / {
     chosen {
         zmk,kscan = &kscan0;
     };
-};
 
-/delete-node/ &kscan0;
-
-/ {
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
